@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    min-width: 400px;
+
+    transform: scale(0);
+    animation: appear 0.5s forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes appear {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-container__scoreBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-label,
+.rival-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    color: white;
+}
+
+.player-label {
+    background-color: #4caf50;
+}
+
+.rival-label {
+    background-color: #f44336;
+}
+
+.score {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.scoreP {
+    background-color: #4caf50;
+    color: white;
+}
+
+.scoreC {
+    background-color: #f44336;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #545454;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 6pxrgba(0, 0, 0, 0.2);
+}
+
+.game-container__message-box {
+margin-top: 2rem;
+width: 100%;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.message {
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+    opacity: 0;
+    animation: showMessage 1s forwards;
+    }
+    
+    @keyframes showMessage {
+    from {
+    opacity: 0;
+    transform: translateY(30px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    }
+    
+    .game-container__restart {
+    text-align: center;
+    }
+    
+    .restart {
+    padding: 10px 20px;
+    background-color: #5863A8;
+    }
+    
+    .restart:hover {
+    background-color: #94A0EC;
+    }
+    
+    .game-container__choices {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    }
+    
+    .player-choice,
+.computer-choice {
+width: 150px;
+text-align: center;
+display: none;
+}
+
+.player-choice h3,
+.computer-choice h3 {
+font-size: 1.3rem;
+font-weight: bold;
+margin-bottom: 0.5rem;
+color: #333;
+}
+
+.player-choice-text,
+.computer-choice-text {
+font-size: 24px;
+font-weight: bold;
+color: #333;
+}
+
+.show {
+display: block;
+animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+

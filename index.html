@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <script src="script.js"></script>
+    <div class="container">
+        <div class="game-container">
+            <h1>Rock Paper Scissors</h1>
+            <div class="game-container__scoreBox">
+                <div class="score-container">
+                    <span class="player-label">You</span><div class="scoreP score"></div>
+                </div>
+                <div class="score-container">
+                    <span class="rival-label">Your rival</span><div class="scoreC score"></div>
+                </div>
+            </div>
+            <div class="game-container__choices">
+                <div class="player-choice">
+                    <h3>You:</h3>
+                    <p class="player-choice-text"></p>
+                </div>
+                <div class="computer-choice">
+                    <h3>PC:</h3>
+                    <p class="computer-choice-text"></p>
+                </div>
+            </div>
+            <div class="game-container__options-box">
+                <button class="rock">👊</button>
+                <button class="paper">👋</button>
+                <button class="scissors">✌️</button> 
+            </div>
+            <div class="game-container__message-box">
+                <p class="message"></p>
+            </div>
+            <div class="game-container__restart">
+                <button class="restart">Restart</button>
+            </div>
+        </div>
+</body>
+</html>  
+            
+    <script src="better.js"></script>
 </body>
 </html>
